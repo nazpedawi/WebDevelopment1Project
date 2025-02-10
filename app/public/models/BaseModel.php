@@ -2,7 +2,6 @@
 
 class BaseModel
 {
-
     protected static $pdo;
 
     function __construct()
@@ -23,5 +22,10 @@ class BaseModel
 
             self::$pdo = new PDO($dsn, $user, $pass, $options);
         }
+    }
+
+    public static function getLastInsertId()
+    {
+        return self::$pdo->lastInsertId();
     }
 }

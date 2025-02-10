@@ -20,7 +20,9 @@ require_once(__DIR__ . "/lib/Route.php");
  * Require routes
  */
 require_once(__DIR__ . "/routes/index.php");
+require_once(__DIR__ . "/routes/book.php");
 require_once(__DIR__ . "/routes/user.php");
+require_once(__DIR__ . "/routes/api.php");
 
 // run router
 Route::run();
